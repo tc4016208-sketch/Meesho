@@ -1,0 +1,2134 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meesho - Online Shopping</title>
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+
+    height: 72px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1250px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: #f43397;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+
+/* SEARCH */
+
+.search {
+    height: 44px;
+
+    width: 420px;
+
+    border: 1px solid #999;
+
+    border-radius: 4px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    gap: 12px;
+}
+
+.search i {
+    font-size: 19px;
+
+    color: #555;
+}
+
+.search input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 14px;
+
+    color: #333;
+}
+
+
+/* HEADER LINKS */
+
+.header-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.download,
+.header-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.download i,
+.header-link i {
+    font-size: 20px;
+}
+
+.header-link:hover,
+.download:hover {
+    color: #f43397;
+}
+
+
+/* =====================================================
+   CATEGORY NAV
+===================================================== */
+
+.categories-nav {
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 28px;
+
+    border-bottom: 1px solid #ddd;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    padding: 0 20px;
+}
+
+.categories-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.categories-nav a {
+    font-size: 13px;
+
+    color: #333;
+}
+
+.categories-nav a:hover {
+    color: #f43397;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    max-width: 1200px;
+
+    min-height: 430px;
+
+    margin: 35px auto;
+
+    display: flex;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    background: #fdf0f7;
+}
+
+
+/* HERO LEFT */
+
+.hero-left {
+    width: 50%;
+
+    padding: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.hero-left h1 {
+    font-size: 43px;
+
+    line-height: 1.15;
+
+    margin-bottom: 30px;
+}
+
+.benefits {
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+}
+
+.benefit {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+}
+
+.benefit i {
+    color: #f43397;
+
+    font-size: 21px;
+}
+
+.download-button {
+    width: fit-content;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #f43397;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.download-button:hover {
+    background: #d92983;
+}
+
+
+/* HERO RIGHT */
+
+.hero-right {
+    width: 50%;
+}
+
+.hero-right img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    max-width: 1200px;
+
+    margin: 70px auto 30px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.section-title span {
+    width: 130px;
+
+    height: 1px;
+
+    background: #ddd;
+}
+
+.section-title h2 {
+    font-size: 28px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   CATEGORY CARDS
+===================================================== */
+
+.category-cards {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.category-card {
+    border: 1px solid #eee;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition: .3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+.category-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.category-content {
+    padding: 15px;
+}
+
+.category-content h3 {
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+.category-content p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   PROMO
+===================================================== */
+
+.promo {
+    max-width: 1200px;
+
+    min-height: 300px;
+
+    margin: 70px auto;
+
+    display: flex;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #fff0f7;
+}
+
+.promo-text {
+    width: 50%;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.promo-text p {
+    color: #f43397;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+.promo-text h2 {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.promo-text span {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+.promo-text button {
+    width: fit-content;
+
+    padding: 11px 25px;
+
+    background: #f43397;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+}
+
+.promo-image {
+    width: 50%;
+}
+
+.promo-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.products {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 0 20px;
+}
+
+.products-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.products-heading h2 {
+    font-size: 28px;
+}
+
+.products-heading p {
+    color: #777;
+
+    margin-top: 5px;
+}
+
+.sort-button {
+    padding: 10px 18px;
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+}
+
+
+/* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.product {
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    background: white;
+
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.product-image {
+    height: 285px;
+
+    position: relative;
+
+    background: #f5f5f5;
+}
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.heart {
+    position: absolute;
+
+    right: 10px;
+
+    top: 10px;
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: white;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+
+    font-size: 17px;
+
+    color: #444;
+}
+
+.heart:hover {
+    color: #f43397;
+}
+
+.product-info {
+    padding: 13px;
+}
+
+.product-info h3 {
+    font-size: 14px;
+
+    font-weight: normal;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.delivery {
+    font-size: 12px;
+
+    color: #777;
+
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: inline-block;
+
+    background: #038d63;
+
+    color: white;
+
+    padding: 4px 8px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   SELLER
+===================================================== */
+
+.seller {
+    max-width: 1200px;
+
+    min-height: 380px;
+
+    margin: 80px auto;
+
+    display: flex;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #fff1f8;
+}
+
+.seller-image {
+    width: 50%;
+}
+
+.seller-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.seller-content {
+    width: 50%;
+
+    padding: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.seller-content > span {
+    color: #f43397;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+.seller-content h2 {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.seller-content > p {
+    color: #666;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.seller-points {
+    margin-bottom: 25px;
+}
+
+.seller-points p {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.seller-points i {
+    color: #f43397;
+
+    margin-right: 8px;
+}
+
+.seller-content button {
+    width: fit-content;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    background: #f43397;
+
+    color: white;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   APP
+===================================================== */
+
+.app {
+    max-width: 1200px;
+
+    margin: 70px auto;
+
+    padding: 45px 60px;
+
+    border-radius: 5px;
+
+    background: #fdf0f7;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.app-content h2 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.app-content p {
+    color: #666;
+
+    margin-bottom: 8px;
+}
+
+.app-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.app-buttons button {
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #111;
+
+    color: white;
+}
+
+.phone {
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 25px;
+
+    background: #f43397;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 65px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #f8f8f8;
+
+    border-top: 1px solid #ddd;
+
+    padding: 60px 8%;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-column h3 {
+    margin-bottom: 18px;
+
+    font-size: 17px;
+}
+
+.footer-column p,
+.footer-column a {
+    display: block;
+
+    color: #666;
+
+    font-size: 13px;
+
+    margin-bottom: 13px;
+}
+
+.footer-column a:hover {
+    color: #f43397;
+}
+
+.social {
+    display: flex;
+
+    gap: 18px;
+}
+
+.social i {
+    font-size: 22px;
+
+    color: #f43397;
+
+    cursor: pointer;
+}
+
+.copyright {
+    background: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 17px;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .header-container {
+        gap: 20px;
+    }
+
+    .search {
+        width: 300px;
+    }
+
+    .download {
+        display: none;
+    }
+
+    .categories-nav {
+        justify-content: flex-start;
+    }
+
+    .category-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: auto;
+
+        padding: 12px 15px;
+    }
+
+    .header-container {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 31px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .header-links {
+        width: 100%;
+
+        justify-content: space-around;
+    }
+
+    .download {
+        display: flex;
+    }
+
+    .categories-nav {
+        height: 50px;
+
+        justify-content: flex-start;
+
+        gap: 20px;
+    }
+
+    .categories-nav a {
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        margin: 20px;
+
+        flex-direction: column;
+    }
+
+    .hero-left {
+        width: 100%;
+
+        padding: 35px 25px;
+    }
+
+    .hero-left h1 {
+        font-size: 31px;
+    }
+
+    .benefits {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .hero-right {
+        width: 100%;
+
+        height: 270px;
+    }
+
+
+    /* TITLE */
+
+    .section-title {
+        margin-top: 45px;
+    }
+
+    .section-title span {
+        display: none;
+    }
+
+    .section-title h2 {
+        font-size: 23px;
+    }
+
+
+    /* CATEGORIES */
+
+    .category-cards {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 15px;
+
+        gap: 12px;
+    }
+
+    .category-card img {
+        height: 170px;
+    }
+
+
+    /* PROMO */
+
+    .promo {
+        margin: 45px 15px;
+
+        flex-direction: column;
+    }
+
+    .promo-text {
+        width: 100%;
+
+        padding: 35px 25px;
+    }
+
+    .promo-text h2 {
+        font-size: 28px;
+    }
+
+    .promo-image {
+        width: 100%;
+
+        height: 220px;
+    }
+
+
+    /* PRODUCTS */
+
+    .products {
+        padding: 0 15px;
+    }
+
+    .products-heading h2 {
+        font-size: 22px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-info h3 {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 17px;
+    }
+
+
+    /* SELLER */
+
+    .seller {
+        margin: 50px 15px;
+
+        flex-direction: column;
+    }
+
+    .seller-image {
+        width: 100%;
+
+        height: 250px;
+    }
+
+    .seller-content {
+        width: 100%;
+
+        padding: 30px 25px;
+    }
+
+    .seller-content h2 {
+        font-size: 30px;
+    }
+
+
+    /* APP */
+
+    .app {
+        margin: 40px 15px;
+
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .app-content h2 {
+        font-size: 24px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        grid-template-columns: 1fr;
+
+        padding: 45px 25px;
+
+        gap: 30px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .header-links {
+        gap: 10px;
+    }
+
+    .header-link span,
+    .download span {
+        font-size: 10px;
+    }
+
+    .category-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card img {
+        height: 220px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    .sort-button {
+        display: none;
+    }
+
+}
+</style>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="header-container">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            meesho
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search">
+
+            <i class="bi bi-search"></i>
+
+            <input
+                type="text"
+                placeholder="Try Saree, Kurti or Search by Product"
+            >
+
+        </div>
+
+
+        <!-- HEADER LINKS -->
+
+        <div class="header-links">
+
+            <div class="download">
+
+                <i class="bi bi-phone"></i>
+
+                <span>
+                    Download App
+                </span>
+
+            </div>
+
+
+            <div class="header-link">
+
+                <i class="bi bi-person"></i>
+
+                <span>
+                    Profile
+                </span>
+
+            </div>
+
+
+            <div class="header-link">
+
+                <i class="bi bi-cart3"></i>
+
+                <span>
+                    Cart
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CATEGORY NAVIGATION
+===================================================== -->
+
+<nav class="categories-nav">
+
+    <a href="#">Women Ethnic</a>
+
+    <a href="#">Women Western</a>
+
+    <a href="#">Men</a>
+
+    <a href="#">Kids</a>
+
+    <a href="#">Home & Kitchen</a>
+
+    <a href="#">Beauty & Health</a>
+
+    <a href="#">Jewellery & Accessories</a>
+
+    <a href="#">Bags & Footwear</a>
+
+    <a href="#">Electronics</a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <h1>
+            Lowest Prices.<br>
+            Best Quality Shopping.
+        </h1>
+
+
+        <div class="benefits">
+
+            <div class="benefit">
+
+                <i class="bi bi-truck"></i>
+
+                <span>
+                    Free Delivery
+                </span>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <i class="bi bi-cash-coin"></i>
+
+                <span>
+                    Cash on Delivery
+                </span>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <i class="bi bi-arrow-return-left"></i>
+
+                <span>
+                    Easy Returns
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button class="download-button">
+
+            <i class="bi bi-google-play"></i>
+
+            Download the Meesho App
+
+        </button>
+
+    </div>
+
+
+    <div class="hero-right">
+
+        <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200"
+            alt="Online Fashion Shopping"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOP CATEGORIES
+===================================================== -->
+
+<section class="top-category">
+
+    <div class="section-title">
+
+        <span></span>
+
+        <h2>
+            Top Categories to Choose From
+        </h2>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="category-cards">
+
+
+        <div class="category-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=700"
+                alt="Sarees"
+            >
+
+            <div class="category-content">
+
+                <h3>
+                    Women Ethnic
+                </h3>
+
+                <p>
+                    Sarees & Kurtis
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=700"
+                alt="Women Western"
+            >
+
+            <div class="category-content">
+
+                <h3>
+                    Women Western
+                </h3>
+
+                <p>
+                    Dresses & Tops
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=700"
+                alt="Kids Fashion"
+            >
+
+            <div class="category-content">
+
+                <h3>
+                    Kids
+                </h3>
+
+                <p>
+                    Fashion & Toys
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=700"
+                alt="Mens Fashion"
+            >
+
+            <div class="category-content">
+
+                <h3>
+                    Men
+                </h3>
+
+                <p>
+                    Shirts & T-Shirts
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROMOTIONAL BANNER
+===================================================== -->
+
+<section class="promo">
+
+    <div class="promo-text">
+
+        <p>
+            MEESHO SPECIAL
+        </p>
+
+        <h2>
+            Fashion at Amazing Prices
+        </h2>
+
+        <span>
+            Explore thousands of products starting from ₹99
+        </span>
+
+        <button>
+            Shop Now
+        </button>
+
+    </div>
+
+
+    <div class="promo-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200"
+            alt="Fashion"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section class="products">
+
+    <div class="products-heading">
+
+        <div>
+
+            <h2>
+                Products For You
+            </h2>
+
+            <p>
+                Explore products you'll love
+            </p>
+
+        </div>
+
+
+        <button class="sort-button">
+
+            <i class="bi bi-filter"></i>
+
+            Sort & Filter
+
+        </button>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600"
+                    alt="Saree"
+                >
+
+                <button class="heart">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Elegant Printed Saree
+                </h3>
+
+                <p class="price">
+                    ₹399
+                </p>
+
+                <p class="delivery">
+                    Free Delivery
+                </p>
+
+                <div class="rating">
+                    4.2 ★
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600"
+                    alt="Kurti"
+                >
+
+                <button class="heart">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Women's Cotton Kurti
+                </h3>
+
+                <p class="price">
+                    ₹299
+                </p>
+
+                <p class="delivery">
+                    Free Delivery
+                </p>
+
+                <div class="rating">
+                    4.4 ★
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                    alt="T-Shirt"
+                >
+
+                <button class="heart">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Men's Casual T-Shirt
+                </h3>
+
+                <p class="price">
+                    ₹249
+                </p>
+
+                <p class="delivery">
+                    Free Delivery
+                </p>
+
+                <div class="rating">
+                    4.1 ★
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+                    alt="Shoes"
+                >
+
+                <button class="heart">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Stylish Running Shoes
+                </h3>
+
+                <p class="price">
+                    ₹599
+                </p>
+
+                <p class="delivery">
+                    Free Delivery
+                </p>
+
+                <div class="rating">
+                    4.5 ★
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 5 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"
+                    alt="Handbag"
+                >
+
+                <button class="heart">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Women's Fashion Handbag
+                </h3>
+
+                <p class="price">
+                    ₹449
+                </p>
+
+                <p class="delivery">
+                    Free Delivery
+                </p>
+
+                <div class="rating">
+                    4.3 ★
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600"
+                    alt="Shirt"
+                >
+
+                <button class="heart">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Men's Formal Shirt
+                </h3>
+
+                <p class="price">
+                    ₹349
+                </p>
+
+                <p class="delivery">
+                    Free Delivery
+                </p>
+
+                <div class="rating">
+                    4.2 ★
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 7 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?w=600"
+                    alt="Hoodie"
+                >
+
+                <button class="heart">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Comfortable Hoodie
+                </h3>
+
+                <p class="price">
+                    ₹499
+                </p>
+
+                <p class="delivery">
+                    Free Delivery
+                </p>
+
+                <div class="rating">
+                    4.4 ★
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 8 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600"
+                    alt="Jacket"
+                >
+
+                <button class="heart">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Men's Casual Jacket
+                </h3>
+
+                <p class="price">
+                    ₹699
+                </p>
+
+                <p class="delivery">
+                    Free Delivery
+                </p>
+
+                <div class="rating">
+                    4.3 ★
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SELLER SECTION
+===================================================== -->
+
+<section class="seller">
+
+    <div class="seller-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1000"
+            alt="Become a seller"
+        >
+
+    </div>
+
+
+    <div class="seller-content">
+
+        <span>
+            SELL ON MEESHO
+        </span>
+
+        <h2>
+            Become a Seller
+        </h2>
+
+        <p>
+            Start your online business and reach
+            millions of customers across India.
+        </p>
+
+
+        <div class="seller-points">
+
+            <p>
+                <i class="bi bi-check-circle-fill"></i>
+                Easy registration
+            </p>
+
+            <p>
+                <i class="bi bi-check-circle-fill"></i>
+                Reach millions of customers
+            </p>
+
+            <p>
+                <i class="bi bi-check-circle-fill"></i>
+                Grow your business
+            </p>
+
+        </div>
+
+
+        <button>
+            Start Selling
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     APP DOWNLOAD
+===================================================== -->
+
+<section class="app">
+
+    <div class="app-content">
+
+        <h2>
+            Shop Non-Stop on Meesho
+        </h2>
+
+        <p>
+            Trusted by millions of Indians
+        </p>
+
+        <p>
+            Cash on Delivery | Free Delivery
+        </p>
+
+
+        <div class="app-buttons">
+
+            <button>
+                <i class="bi bi-google-play"></i>
+                Google Play
+            </button>
+
+            <button>
+                <i class="bi bi-apple"></i>
+                App Store
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="phone">
+
+        <i class="bi bi-phone"></i>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-column">
+
+        <h3>
+            Shop Non-Stop
+        </h3>
+
+        <p>
+            Trusted by more than 1 crore Indians.
+        </p>
+
+        <p>
+            Affordable products for everyone.
+        </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Careers
+        </h3>
+
+        <a href="#">
+            Become a Supplier
+        </a>
+
+        <a href="#">
+            Influencer Program
+        </a>
+
+        <a href="#">
+            Careers
+        </a>
+
+        <a href="#">
+            Hall of Fame
+        </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Legal & Policies
+        </h3>
+
+        <a href="#">
+            Terms & Conditions
+        </a>
+
+        <a href="#">
+            Privacy Policy
+        </a>
+
+        <a href="#">
+            Return Policy
+        </a>
+
+        <a href="#">
+            Shipping Policy
+        </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Follow Us
+        </h3>
+
+        <div class="social">
+
+            <i class="bi bi-facebook"></i>
+
+            <i class="bi bi-instagram"></i>
+
+            <i class="bi bi-youtube"></i>
+
+            <i class="bi bi-twitter-x"></i>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<div class="copyright">
+
+    © 2026 Meesho Clone | Educational Frontend Project
+
+</div>
+
+
+</body>
+
+</html>
