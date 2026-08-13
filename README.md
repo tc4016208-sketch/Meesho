@@ -10,7 +10,7 @@ A responsive Meesho-inspired e-commerce website developed using HTML5 and CSS3. 
 
 You can add your deployed website link here:
 
-Live Demo: "https://your-username.github.io/meesho-clone/"
+Live Demo: "https://your-tc4016208-sketch.github.io/meesho-clone/"
 
 ---
 
